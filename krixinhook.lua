@@ -2837,7 +2837,7 @@ local Visuals = {}
             for i = 1, 3 do _chTri[i] = mkDraw("Circle", { Filled = true }) end
             _wmBg     = mkDraw("Square", { Filled = true, Color = C_FILL })
             _wmAccent = mkDraw("Line",   { Color = C_GOLD, Thickness = 2 })
-            _wmText   = mkDraw("Text",   { Center = false, Outline = true, Font = 2, Size = 13, Text = "MEOWHOOK", Color = _WHITE })
+            _wmText   = mkDraw("Text",   { Center = false, Outline = true, Font = 2, Size = 13, Text = "krixinhook", Color = _WHITE })
             _wm.stats = mkDraw("Text",   { Center = false, Outline = true, Font = 3, Size = 12, Color = C_TEXT2 })
             _tiBg     = mkDraw("Square", { Filled = true, Color = C_FILL })
             _tiAccent = mkDraw("Line",   { Color = C_GOLD, Thickness = 2 })
@@ -3606,7 +3606,7 @@ local Visuals = {}
                     local bx = right and (vp.X - 110) or 16
                     local by = vp.Y * 0.35
                     if _blHead then
-                        _blHead.Text = "MEOWHOOK"; _blHead.Color = C_GOLD
+                        _blHead.Text = "krixinhook"; _blHead.Color = C_GOLD
                         _blHead.Position = Vector2.new(bx, by)
                         _blHead.Transparency = 1; _blHead.Visible = true
                     end
@@ -15954,7 +15954,7 @@ do (function()
         if autoQueueNote == nil or Config.AutoQueue ~= true then return end
         local lib = _G["\76\72"]
         if lib == nil or lib.Notify == nil then return end
-        pcall(function() lib:Notify("[MEOWHOOK] AutoQueue: " .. autoQueueNote, 8) end)
+        pcall(function() lib:Notify("[krixinhook] AutoQueue: " .. autoQueueNote, 8) end)
     end)
     pcall(function()
     local _lastCollect = 0
@@ -16023,7 +16023,7 @@ pcall(function()
     Library.FontColor       = Color3.fromRGB(239, 241, 245)
 end)
 local windowOptions = {
-    Title = 'MEOWHOOK',
+    Title = 'krixinhook',
     Center = true,
     AutoShow = false,
     TabPadding = 8,
@@ -16034,7 +16034,7 @@ local windowOptions = {
 }
 local okWin, Window = pcall(function() return Library:CreateWindow(windowOptions) end)
 if not okWin or not Window then
-    warn("[MEOWHOOK] GUI window failed to build:", Window)
+    warn("[krixinhook] GUI window failed to build:", Window)
     return
 end
 local Tabs = {
@@ -17020,7 +17020,7 @@ do
         end
     end })
     L:AddDivider()
-    L:AddButton({ Text = 'UNLOAD MEOWHOOK', DoubleClick = true, Func = function()
+    L:AddButton({ Text = 'UNLOAD krixinhook', DoubleClick = true, Func = function()
         pcall(function() ESP.unload() end)
         pcall(function() Aimbot.unload() end)
         pcall(function() Trigger.unload() end)
@@ -17047,7 +17047,7 @@ task.spawn(function()
         SaveManager:IgnoreThemeSettings()
         SaveManager:SetIgnoreIndexes({ 'MenuKeybind', 'LH_ConfigName',
             'GVWeapon', 'GVSkin', 'GVCharm', 'GVWrap', 'GVFinisher', 'GVEmote', 'GVRankWep', 'GVRankLook' })
-        ThemeManager:SetFolder('MEOWHOOK')
+        ThemeManager:SetFolder('krixinhook')
         SaveManager:SetFolder('MOEWHOOK/configs')
         SaveManager:BuildConfigSection(Tabs.Settings)
         ThemeManager:ApplyToTab(Tabs.Settings)
@@ -17097,7 +17097,7 @@ Library.Unload = function(self, ...)
     pcall(GameVisuals.disable)
     return _origUnload(self, ...)
 end
-pcall(function() Library:SetWatermark('MEOWHOOK') end)
+pcall(function() Library:SetWatermark('krixinhook') end)
 pcall(function() Library:SetWatermarkVisibility(false) end)
 task.spawn(function()
     while _wmAlive do
@@ -17107,7 +17107,7 @@ task.spawn(function()
             local hits, shots = State.Hits, State.Shots
             local acc = shots > 0 and math.floor((hits / shots) * 100) or 0
             local text = string.format(
-                'MEOWHOOK  ·  %s  ·  Shots: %d  ·  Hits: %d  ·  Acc: %d%%',
+                'krixinhook  ·  %s  ·  Shots: %d  ·  Hits: %d  ·  Acc: %d%%',
                 lp.DisplayName, shots, hits, acc
             )
             if Config.Rage then
@@ -17118,5 +17118,5 @@ task.spawn(function()
         task.wait(0.5)
     end
 end)
-Library:Notify('MEOWHOOK loaded', 4)
+Library:Notify('krixinhook loaded', 4)
 _G["\76\72"] = Library
