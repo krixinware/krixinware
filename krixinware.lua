@@ -66557,7 +66557,7 @@ task.wait(1)
 end
 print("[Kicia] client alive, booting ...")
 print("[Kicia] controllers ready, booting ...")
-print("[FIX] auto-exec/color picker by skidcoded")
+print("[FIX] auto-exec/color picker by krix2k")
 tbl17.j1()(bootFn())
 task.spawn(function()
 task.wait(60)
