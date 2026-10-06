@@ -18024,7 +18024,7 @@ end
 
 local obj = setmetatable({
 _trove = v136,
-Title = arg.Title or "khook.lua",
+Title = arg.Title or "krixinware.lua",
 Icon = arg.Icon or "rbxassetid://118838006164746",
 Directory = directory,
 ConfigVersion = arg.ConfigVersion or v86[63],
@@ -60521,12 +60521,12 @@ return
 end
 local GetRankingByUserID = fn36("GetRankingByUserID")
 if GetRankingByUserID == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankHook", "function_lookup", "GetRankingByUserID unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "function_lookup", "GetRankingByUserID unavailable").Error)
 return
 end
 local getHighestELOLeaderboardRanking = v102(seasonLibrary, "GetHighestELOLeaderboardRanking")
 if getHighestELOLeaderboardRanking == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankHook", "function_lookup", "GetHighestELOLeaderboardRanking unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "function_lookup", "GetHighestELOLeaderboardRanking unavailable").Error)
 return
 end
 
@@ -60539,7 +60539,7 @@ end
 end
 
 if arg._restore == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankHook", "constant_scan", "GetRankingByUserID constant not found").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "constant_scan", "GetRankingByUserID constant not found").Error)
 return
 end
 
@@ -60563,7 +60563,7 @@ return
 end
 local leaderboardSerials = v102(leaderboardController, "LeaderboardSerials")
 if type(leaderboardSerials) ~= "table" then
-arg._errorReporter:Report(v115.err("LeaderboardRankHook", "table_lookup", "LeaderboardSerials unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "table_lookup", "LeaderboardSerials unavailable").Error)
 return
 end
 local v119 = leaderboardSerials
@@ -60616,7 +60616,7 @@ end
 index2.TriggerRefresh = function(arg)
 local GetLeaderboardRefreshedSignal = fn36("GetLeaderboardRefreshedSignal")
 if GetLeaderboardRefreshedSignal == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankHook", "function_lookup", "GetLeaderboardRefreshedSignal unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "function_lookup", "GetLeaderboardRefreshedSignal unavailable").Error)
 return
 end
 local highestElo = v116(GetLeaderboardRefreshedSignal, leaderboardController, "Highest ELO")
@@ -61258,7 +61258,7 @@ local tbl20 = {
 _trove = statSpoofer,
 _attributeSink = statSpoofer:Add(v117.new(arg)),
 _leaderstatSink = statSpoofer:Add(v119.new(arg)),
-_leaderboardRankHook = arg4,
+_leaderboardRankrixinware = arg4,
 _requestBinding = arg2,
 _dataHook = arg3,
 }
@@ -61292,12 +61292,12 @@ arg._leaderstatSink:RefreshScope(arg2)
 
 if arg2 == "LocalPlayer" then
 v121.recompute(arg._dataHook)
-v118.recompute(arg._leaderboardRankHook)
+v118.recompute(arg._leaderboardRankrixinware)
 end
 end)
 
 v116(arg._trove, "LeaderboardRank", function()
-v118.recompute(arg._leaderboardRankHook)
+v118.recompute(arg._leaderboardRankrixinware)
 end)
 
 for _, v122 in tbl19, nil, nil do
@@ -61308,7 +61308,7 @@ end
 
 v120.recompute(arg._requestBinding)
 v121.recompute(arg._dataHook)
-v118.recompute(arg._leaderboardRankHook)
+v118.recompute(arg._leaderboardRankrixinware)
 end
 
 index2.Destroy = function(arg)
@@ -64255,7 +64255,7 @@ return v116.VoidOk
 end
 end
 
-return v116.err("QuickAttackHook", "upvalue_scan", "Failed to find ReplicatedStorage upvalue")
+return v116.err("QuickAttackrixinware", "upvalue_scan", "Failed to find ReplicatedStorage upvalue")
 end
 
 index2.Destroy = function(arg)
@@ -64340,7 +64340,7 @@ _anchorInverse = v119,
 _rootPart = arg3.RootPart,
 _itemBehaviors = arg5,
 _inputBinding = arg6,
-_quickAttackHook = nil,
+_quickAttackrixinware = nil,
 _jumpConnection = nil,
 _lastMoveVector = Vector3.zero,
 _lastCameraRotation = v120,
@@ -64364,7 +64364,7 @@ Positions = {},
 
 setmetatable(tbl18, index2)
 
-tbl18._quickAttackHook = v116.new(arg4, function(arg7)
+tbl18._quickAttackrixinware = v116.new(arg4, function(arg7)
 tbl18:_Record({ Kind = "QuickAttack", AttackType = arg7 })
 end)
 
@@ -64502,7 +64502,7 @@ end
 
 index2.Destroy = function(arg)
 arg._inputBinding:Destroy()
-arg._quickAttackHook:Destroy()
+arg._quickAttackrixinware:Destroy()
 arg._jumpConnection:Disconnect()
 end
 
