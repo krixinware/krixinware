@@ -17889,7 +17889,7 @@ fn38(arg, arg3, v123)
 local v124 = fn39(arg, arg4, arg3, arg2, arg5)
 fn40(v121:AddSection({ Title = "Startup", Side = "left" }), arg, arg7)
 fn41(v121:AddSection({ Title = "Notifications", Side = "right" }), arg6)
-v121:AddSection({ Title = v86[199], Side = "right" }):AddButton({ Label = "Unload KiciaHook", Confirm = true, OnClick = arg4.Unload })
+v121:AddSection({ Title = v86[199], Side = "right" }):AddButton({ Label = "Unload krixinware", Confirm = true, OnClick = arg4.Unload })
 return { General = { Page = v120, Grid = v121 }, ConfigProfiles = { Page = v122, Grid = v123 }, Theme = v124 }
 end
 end
@@ -60418,7 +60418,7 @@ return je.c
 end
 end
 do -- jf
-local function fn35()local I,W= tbl17 .bG(), tbl17 .aE(); tbl17 .hN();local N,P,a,e,c,E,p,T= tbl17 .h_(), tbl17 .ij(), tbl17 .ip(), tbl17 .n(), tbl17 .iw(), tbl17 .i_(), tbl17 .je(),cloneref(game:GetService("Players")).LocalPlayer;return function(l)if getgenv().KhForceMobileUi==true then W.ForceMobileLayout();end;local t=W.Menu.new({Icon=K.LithiumLogo,Title=string.format("KiciaHooker fixed by skidcoded | %s",tostring("Skidded Build")),Directory="kiciarebuild/rivals",Config=l.ReactiveStoreAdapter,ColorAnimation=l.ColorAnimation,Persistence=I,State=l.GeneralState,StateData=l.GeneralStateData,OnUnload=function()e:Destroy();end});e:Add(t);local I=l.PlayerIdentities;t:SetWatermarkUsername(I:GetPresented(T));e:Connect(I.IdentityChanged,function(W)if W==T then t:SetWatermarkUsername(I:GetPresented(T));end;end);P(l,t);E(l,t);c(l,t);N(l,t);p(l,t);a(l,t);t:AddSettingsTab();t:SetVisible(not(l.GeneralStateData.SilentLoad==true),true);end;end
+local function fn35()local I,W= tbl17 .bG(), tbl17 .aE(); tbl17 .hN();local N,P,a,e,c,E,p,T= tbl17 .h_(), tbl17 .ij(), tbl17 .ip(), tbl17 .n(), tbl17 .iw(), tbl17 .i_(), tbl17 .je(),cloneref(game:GetService("Players")).LocalPlayer;return function(l)if getgenv().KhForceMobileUi==true then W.ForceMobileLayout();end;local t=W.Menu.new({Icon=K.LithiumLogo,Title=string.format("krixinwareer fixed by skidcoded | %s",tostring("Skidded Build")),Directory="kiciarebuild/rivals",Config=l.ReactiveStoreAdapter,ColorAnimation=l.ColorAnimation,Persistence=I,State=l.GeneralState,StateData=l.GeneralStateData,OnUnload=function()e:Destroy();end});e:Add(t);local I=l.PlayerIdentities;t:SetWatermarkUsername(I:GetPresented(T));e:Connect(I.IdentityChanged,function(W)if W==T then t:SetWatermarkUsername(I:GetPresented(T));end;end);P(l,t);E(l,t);c(l,t);N(l,t);p(l,t);a(l,t);t:AddSettingsTab();t:SetVisible(not(l.GeneralStateData.SilentLoad==true),true);end;end
 
 tbl17.jf = function()
 local jf = tbl17.cache.jf
