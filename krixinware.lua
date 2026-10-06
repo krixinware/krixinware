@@ -17889,7 +17889,7 @@ fn38(arg, arg3, v123)
 local v124 = fn39(arg, arg4, arg3, arg2, arg5)
 fn40(v121:AddSection({ Title = "Startup", Side = "left" }), arg, arg7)
 fn41(v121:AddSection({ Title = "Notifications", Side = "right" }), arg6)
-v121:AddSection({ Title = v86[199], Side = "right" }):AddButton({ Label = "Unload krixinware", Confirm = true, OnClick = arg4.Unload })
+v121:AddSection({ Title = v86[199], Side = "right" }):AddButton({ Label = "Unload krixinhook", Confirm = true, OnClick = arg4.Unload })
 return { General = { Page = v120, Grid = v121 }, ConfigProfiles = { Page = v122, Grid = v123 }, Theme = v124 }
 end
 end
@@ -18024,7 +18024,7 @@ end
 
 local obj = setmetatable({
 _trove = v136,
-Title = arg.Title or "krixinware.lua",
+Title = arg.Title or "krixinhook.lua",
 Icon = arg.Icon or "rbxassetid://118838006164746",
 Directory = directory,
 ConfigVersion = arg.ConfigVersion or v86[63],
@@ -60418,7 +60418,7 @@ return je.c
 end
 end
 do -- jf
-local function fn35()local I,W= tbl17 .bG(), tbl17 .aE(); tbl17 .hN();local N,P,a,e,c,E,p,T= tbl17 .h_(), tbl17 .ij(), tbl17 .ip(), tbl17 .n(), tbl17 .iw(), tbl17 .i_(), tbl17 .je(),cloneref(game:GetService("Players")).LocalPlayer;return function(l)if getgenv().KhForceMobileUi==true then W.ForceMobileLayout();end;local t=W.Menu.new({Icon=K.LithiumLogo,Title=string.format("krixinware | %s",tostring("premium Build nga")),Directory="kiciarebuild/rivals",Config=l.ReactiveStoreAdapter,ColorAnimation=l.ColorAnimation,Persistence=I,State=l.GeneralState,StateData=l.GeneralStateData,OnUnload=function()e:Destroy();end});e:Add(t);local I=l.PlayerIdentities;t:SetWatermarkUsername(I:GetPresented(T));e:Connect(I.IdentityChanged,function(W)if W==T then t:SetWatermarkUsername(I:GetPresented(T));end;end);P(l,t);E(l,t);c(l,t);N(l,t);p(l,t);a(l,t);t:AddSettingsTab();t:SetVisible(not(l.GeneralStateData.SilentLoad==true),true);end;end
+local function fn35()local I,W= tbl17 .bG(), tbl17 .aE(); tbl17 .hN();local N,P,a,e,c,E,p,T= tbl17 .h_(), tbl17 .ij(), tbl17 .ip(), tbl17 .n(), tbl17 .iw(), tbl17 .i_(), tbl17 .je(),cloneref(game:GetService("Players")).LocalPlayer;return function(l)if getgenv().KhForceMobileUi==true then W.ForceMobileLayout();end;local t=W.Menu.new({Icon=K.LithiumLogo,Title=string.format("krixinhook | %s",tostring("premium Build nga")),Directory="kiciarebuild/rivals",Config=l.ReactiveStoreAdapter,ColorAnimation=l.ColorAnimation,Persistence=I,State=l.GeneralState,StateData=l.GeneralStateData,OnUnload=function()e:Destroy();end});e:Add(t);local I=l.PlayerIdentities;t:SetWatermarkUsername(I:GetPresented(T));e:Connect(I.IdentityChanged,function(W)if W==T then t:SetWatermarkUsername(I:GetPresented(T));end;end);P(l,t);E(l,t);c(l,t);N(l,t);p(l,t);a(l,t);t:AddSettingsTab();t:SetVisible(not(l.GeneralStateData.SilentLoad==true),true);end;end
 
 tbl17.jf = function()
 local jf = tbl17.cache.jf
@@ -60521,12 +60521,12 @@ return
 end
 local GetRankingByUserID = fn36("GetRankingByUserID")
 if GetRankingByUserID == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "function_lookup", "GetRankingByUserID unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinhook", "function_lookup", "GetRankingByUserID unavailable").Error)
 return
 end
 local getHighestELOLeaderboardRanking = v102(seasonLibrary, "GetHighestELOLeaderboardRanking")
 if getHighestELOLeaderboardRanking == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "function_lookup", "GetHighestELOLeaderboardRanking unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinhook", "function_lookup", "GetHighestELOLeaderboardRanking unavailable").Error)
 return
 end
 
@@ -60539,7 +60539,7 @@ end
 end
 
 if arg._restore == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "constant_scan", "GetRankingByUserID constant not found").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinhook", "constant_scan", "GetRankingByUserID constant not found").Error)
 return
 end
 
@@ -60563,7 +60563,7 @@ return
 end
 local leaderboardSerials = v102(leaderboardController, "LeaderboardSerials")
 if type(leaderboardSerials) ~= "table" then
-arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "table_lookup", "LeaderboardSerials unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinhook", "table_lookup", "LeaderboardSerials unavailable").Error)
 return
 end
 local v119 = leaderboardSerials
@@ -60616,7 +60616,7 @@ end
 index2.TriggerRefresh = function(arg)
 local GetLeaderboardRefreshedSignal = fn36("GetLeaderboardRefreshedSignal")
 if GetLeaderboardRefreshedSignal == nil then
-arg._errorReporter:Report(v115.err("LeaderboardRankrixinware", "function_lookup", "GetLeaderboardRefreshedSignal unavailable").Error)
+arg._errorReporter:Report(v115.err("LeaderboardRankrixinhook", "function_lookup", "GetLeaderboardRefreshedSignal unavailable").Error)
 return
 end
 local highestElo = v116(GetLeaderboardRefreshedSignal, leaderboardController, "Highest ELO")
@@ -61258,7 +61258,7 @@ local tbl20 = {
 _trove = statSpoofer,
 _attributeSink = statSpoofer:Add(v117.new(arg)),
 _leaderstatSink = statSpoofer:Add(v119.new(arg)),
-_leaderboardRankrixinware = arg4,
+_leaderboardRankrixinhook = arg4,
 _requestBinding = arg2,
 _dataHook = arg3,
 }
@@ -61292,12 +61292,12 @@ arg._leaderstatSink:RefreshScope(arg2)
 
 if arg2 == "LocalPlayer" then
 v121.recompute(arg._dataHook)
-v118.recompute(arg._leaderboardRankrixinware)
+v118.recompute(arg._leaderboardRankrixinhook)
 end
 end)
 
 v116(arg._trove, "LeaderboardRank", function()
-v118.recompute(arg._leaderboardRankrixinware)
+v118.recompute(arg._leaderboardRankrixinhook)
 end)
 
 for _, v122 in tbl19, nil, nil do
@@ -61308,7 +61308,7 @@ end
 
 v120.recompute(arg._requestBinding)
 v121.recompute(arg._dataHook)
-v118.recompute(arg._leaderboardRankrixinware)
+v118.recompute(arg._leaderboardRankrixinhook)
 end
 
 index2.Destroy = function(arg)
@@ -64255,7 +64255,7 @@ return v116.VoidOk
 end
 end
 
-return v116.err("QuickAttackrixinware", "upvalue_scan", "Failed to find ReplicatedStorage upvalue")
+return v116.err("QuickAttackrixinhook", "upvalue_scan", "Failed to find ReplicatedStorage upvalue")
 end
 
 index2.Destroy = function(arg)
@@ -64340,7 +64340,7 @@ _anchorInverse = v119,
 _rootPart = arg3.RootPart,
 _itemBehaviors = arg5,
 _inputBinding = arg6,
-_quickAttackrixinware = nil,
+_quickAttackrixinhook = nil,
 _jumpConnection = nil,
 _lastMoveVector = Vector3.zero,
 _lastCameraRotation = v120,
@@ -64364,7 +64364,7 @@ Positions = {},
 
 setmetatable(tbl18, index2)
 
-tbl18._quickAttackrixinware = v116.new(arg4, function(arg7)
+tbl18._quickAttackrixinhook = v116.new(arg4, function(arg7)
 tbl18:_Record({ Kind = "QuickAttack", AttackType = arg7 })
 end)
 
@@ -64502,7 +64502,7 @@ end
 
 index2.Destroy = function(arg)
 arg._inputBinding:Destroy()
-arg._quickAttackrixinware:Destroy()
+arg._quickAttackrixinhook:Destroy()
 arg._jumpConnection:Disconnect()
 end
 
