@@ -1,4 +1,4 @@
-
+print("kys u dumb nigger")
 if getgenv().KiciaRebuild and getgenv().KiciaRebuild.Unload then
     pcall(getgenv().KiciaRebuild.Unload)
 end
